@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Prediction</title>
+</head>
+
+<body>
+
+<h2>Disease Prediction System</h2>
+
+<form action="/predict" method="post">
+
+<label>Itching</label>
+<select name="itching">
+<option value="1">Yes</option>
+<option value="0">No</option>
+</select>
+
+<br><br>
+
+<label>Skin Rash</label>
+<select name="skin_rash">
+<option value="1">Yes</option>
+<option value="0">No</option>
+</select>
+
+<br><br>
+
+<label>Nodal Skin Eruptions</label>
+<select name="nodal_skin_eruptions">
+<option value="1">Yes</option>
+<option value="0">No</option>
+</select>
+
+<br><br>
+
+<label>Continuous Sneezing</label>
+<select name="continuous_sneezing">
+<option value="1">Yes</option>
+<option value="0">No</option>
+</select>
+
+<br><br>
+
+<button type="submit">Predict Disease</button>
+
+</form>
+
+{% if result %}
+<h3>Predicted Disease: {{ result }}</h3>
+{% endif %}
+
+</body>
+</html>
