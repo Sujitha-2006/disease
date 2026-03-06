@@ -11,7 +11,7 @@ def predict():
     itching=int(request.form["itching"])
     skin_rash=int(request.form["skin_rash"])
     nodal_skin_eruptions=int(request.form["nodal_skin_eruptions"])
-    continuous_sneezing=int(request.form["continuous_sneezing"])
+    sneezing=int(request.form["sneezing"])
     features=np.array([[itching,skin_rash,nodal_skin_eruptions]])
     prediction=model.predict(features)
 if __name__=="__main__":
